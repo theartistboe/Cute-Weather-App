@@ -1,0 +1,21 @@
+.card {
+  margin-top: 35px;
+  padding: 10px;
+  border: 1.8px solid #00ffcc;
+  border-radius: 10px;
+  background: #fffefb;
+  box-shadow: 2px 2px 7px rgba(0, 128, 119, 0.5);
+}
+
+.cardweekdays {
+  margin-top: 35px;
+  padding: 10px;
+  border: 1.8px solid #00ffcc;
+  border-radius: 10px;
+  background: #fffefb;
+  box-shadow: 2px 2px 7px rgba(0, 128, 119, 0.2);
+}
+
+footer {
+  text-align: center;
+}
