@@ -1,3 +1,11 @@
+h2 {
+  display: block;
+  text-align: center;
+  font-size: 100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #ff8ba7;
+}
 ul {
   display: block;
   margin: 0 auto;
