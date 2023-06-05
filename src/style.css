@@ -11,19 +11,18 @@ h2 {
   display: block;
   text-align: center;
   font-size: 25px;
-  font-weight: 50;
+  font-weight: lighter;
   text-transform: capitalize;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffc6c7;
 }
 
 ul {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: block;
   margin-top: 300px;
   font-size: 18px;
-  font-weight: light;
+  font-weight: lighter;
   color: #ff8ba7;
 }
 
