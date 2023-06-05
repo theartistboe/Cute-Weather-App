@@ -6,14 +6,16 @@ h1 {
     "Lucida Sans", Arial, sans-serif;
   color: #ffc6c7;
 }
+
 h2 {
   display: block;
   text-align: center;
-  font-size: 75;
+  font-size: 75px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: #ffc6c7;
 }
+
 ul {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: block;
@@ -25,6 +27,7 @@ ul {
 
 li {
   list-style-type: none;
+  text-transform: capitalize;
 }
 
 footer {
