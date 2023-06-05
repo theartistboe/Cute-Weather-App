@@ -19,6 +19,7 @@ li {
 }
 footer {
   text-align: center;
+  color: #ff8ba7;
 }
 
 .card {
@@ -27,7 +28,7 @@ footer {
   border: 1.8px solid #00ffcc;
   border-radius: 10px;
   background: #fffefb;
-  box-shadow: 3px 3px 40px rgba(148, 216, 210, 0.5);
+  box-shadow: 3px 3px 40px rgba(216, 148, 148, 0.4);
 }
 
 .cardweekdays {
@@ -68,4 +69,23 @@ footer {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.search-bar {
+  text-align: left;
+  padding: 10px;
+}
+.search-bar label {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  margin-right: 10px;
+  color: #ffc6c7;
+}
+.btn-primary {
+  background-color: #00ffcc;
+  border: none;
+  align-items: right;
 }
