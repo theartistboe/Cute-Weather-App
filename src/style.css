@@ -1,10 +1,25 @@
+ul {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: light;
+  color: #ff8ba7;
+}
+
+li {
+  list-style-type: none;
+}
+footer {
+  text-align: center;
+}
+
 .card {
   margin-top: 35px;
   padding: 10px;
   border: 1.8px solid #00ffcc;
   border-radius: 10px;
   background: #fffefb;
-  box-shadow: 2px 2px 7px rgba(0, 128, 119, 0.5);
+  box-shadow: 3px 3px 40px rgba(148, 216, 210, 0.5);
 }
 
 .cardweekdays {
@@ -14,8 +29,35 @@
   border-radius: 10px;
   background: #fffefb;
   box-shadow: 2px 2px 7px rgba(0, 128, 119, 0.2);
+  color: #ff8ba7;
 }
 
-footer {
+.cardweekdays i {
+  color: #ffc6c7;
+}
+
+.current {
+  font-size: 95px;
   text-align: center;
+  margin-right: 10px;
+}
+
+.temp {
+  display: block;
+  position: relative;
+  padding-top: 150px;
+  margin-right: 0;
+  color: #ff8ba7;
+  font-size: 100px;
+  font-weight: 120;
+}
+
+.fa-cloud-sun {
+  display: block;
+  font-size: 175px;
+  margin: 75px auto;
+  background-image: linear-gradient(to bottom, #fff0ad, #ffb6b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
