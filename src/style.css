@@ -10,7 +10,9 @@ h1 {
 h2 {
   display: block;
   text-align: center;
-  font-size: 75px;
+  font-size: 25px;
+  font-weight: 50;
+  text-transform: capitalize;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: #ffc6c7;
