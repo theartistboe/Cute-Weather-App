@@ -15,9 +15,10 @@ h2 {
   color: #ffc6c7;
 }
 ul {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: block;
-  margin: 0 auto;
-  font-size: 20px;
+  margin-top: 300px;
+  font-size: 18px;
   font-weight: light;
   color: #ff8ba7;
 }
@@ -25,6 +26,7 @@ ul {
 li {
   list-style-type: none;
 }
+
 footer {
   text-align: center;
   color: #ff8ba7;
@@ -40,7 +42,7 @@ footer {
 }
 
 .cardweekdays {
-  margin-top: 35px;
+  display: block;
   padding: 10px;
   border: 1.8px solid #00ffcc;
   border-radius: 10px;
@@ -67,7 +69,6 @@ footer {
   margin-right: 0;
   color: #ff8ba7;
   font-size: 100px;
-  font-weight: 120;
 }
 
 .fa-cloud-sun {
