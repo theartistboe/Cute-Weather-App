@@ -40,6 +40,9 @@ strong {
 .units {
   display: inline-block;
   vertical-align: middle;
+  color: #ff8ba7;
+  font-size: 125px;
+  font-weight: 100;
 }
 
 footer {
