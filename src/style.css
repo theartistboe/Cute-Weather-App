@@ -103,15 +103,11 @@ a:hover {
   margin-right: 10px;
 }
 
-.fa-cloud-sun {
+#icon {
   display: block;
-  font-size: 225px;
+  width: 100px;
+  height: 100px;
   margin: 75px auto;
-  background-image: linear-gradient(to bottom, #fff0ad, #ffb6b9);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .search-bar {
   text-align: left;
