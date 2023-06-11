@@ -9,7 +9,7 @@ function formatDate(timestamp) {
         minutes = `0${minutes}`;
     }
     let days = ["Sunday", "Monday", "Tuesday", "Wedsnesday", "Thursday", "Friday", "Saturday"];
-    let day = date.getDay();
+    let day = days[date.getDay()];
     return `${day} ${hours} ${minutes}`;
 }
 
