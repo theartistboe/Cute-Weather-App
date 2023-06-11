@@ -37,8 +37,9 @@ strong {
   font-size: 1em;
 }
 
-span.units {
-  float: right;
+.units {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 footer {
@@ -49,6 +50,10 @@ footer {
 a {
   color: #008f72;
   text-decoration: none;
+}
+
+a:active {
+  color: #ff8ba7;
 }
 
 a:hover {
@@ -86,8 +91,8 @@ a:hover {
 }
 
 #temp {
-  display: block;
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   color: #ff8ba7;
   font-size: 100px;
 }
