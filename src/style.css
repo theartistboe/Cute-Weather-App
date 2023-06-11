@@ -29,8 +29,11 @@ ul {
 li {
   display: block;
   list-style-type: none;
-  text-transform: capitalize;
   position: relative;
+}
+
+li::first-letter {
+  text-transform: capitalize;
 }
 
 strong {
