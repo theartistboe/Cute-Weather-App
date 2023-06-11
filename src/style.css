@@ -47,7 +47,8 @@ footer {
 }
 
 a {
-  color: #008f72
+  color: #008f72;
+  text-decoration: none;
 }
 
 a:hover {
@@ -87,15 +88,8 @@ a:hover {
 #temp {
   display: block;
   position: relative;
-  margin-right: 0;
   color: #ff8ba7;
   font-size: 100px;
-}
-
-.units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
 }
 
 .fa-cloud-sun {
