@@ -39,6 +39,13 @@ strong {
 
 .units {
   display: inline-block;
+  vertical-align: top;
+  margin-top: 45px;
+  font-size: 30px;
+}
+
+#temp {
+  display: inline-block;
   vertical-align: middle;
   color: #ff8ba7;
   font-size: 125px;
