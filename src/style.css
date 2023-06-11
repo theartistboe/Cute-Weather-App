@@ -29,7 +29,16 @@ ul {
 li {
   display: block;
   list-style-type: none;
-  text-transform: capitalize
+  text-transform: capitalize;
+  position: relative;
+}
+
+strong {
+  font-size: 1em;
+}
+
+span.units {
+  float: right;
 }
 
 footer {
