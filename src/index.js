@@ -1,4 +1,3 @@
-
 function formatDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
@@ -13,8 +12,8 @@ function formatDate(timestamp) {
     let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
   }
-  
-  function displayTemperature(response) {
+
+function displayTemperature(response) {
     console.log(response.data);
     let tempElement = document.querySelector("#temp");
     let cityElement = document.querySelector("#city");
@@ -23,7 +22,10 @@ function formatDate(timestamp) {
     let windElement = document.querySelector("#wind")
     let datetimeElement = document.querySelector("#datetime")
     let iconElement = document.querySelector("#icon")
-    tempElement.innerHTML = Math.round(response.data.main.temp);
+
+    celsiusTemperature = response.data.main.temp;
+    
+    tempElement.innerHTML = Math.round(celsiusTemperature);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -34,19 +36,41 @@ function formatDate(timestamp) {
     iconElement.setAttribute("src", iconUrl);
   }
 
-  function search(city) {
+function search(city) {
     let apiKey = "4b3503b2f08a729413c4d33ef1186004";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
   }
   
-  function handleSubmit(event) {
+function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
   }
 
-  search("Merced");
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    let tempElement = document.querySelector("#temp")
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    tempElement.innerHTML = Math.round(fahrenheitTemperature);
+  }
 
-  let form = document.querySelector("#search-form");
+  function displayCelsiusTemperature(event) {
+    event.preventDefault();
+    let tempElement = document.querySelector("#temp")
+    tempElement.innerHTML = Math.round(celsiusTemperature);
+  }
+
+let celsiusTemperature = null;
+let fahrenheitTemperature = null;
+
+let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+  search("Merced");
