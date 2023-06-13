@@ -33,8 +33,20 @@ function formatDate(timestamp) {
     let iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
     iconElement.setAttribute("src", iconUrl);
   }
+
+  function search(city) {
+    let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+  }
   
-  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Merced&appid=${apiKey}&units=metric`;
-  
-  axios.get(apiUrl).then(displayTemperature);
+  function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+  }
+
+  search("Merced");
+
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", handleSubmit);
