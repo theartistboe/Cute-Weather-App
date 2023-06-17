@@ -74,3 +74,13 @@ let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
   search("Merced");
+
+  function changeTheme() {
+    let body = document.querySelector("body");
+    body.classList.toggle("dark");
+  }
+  
+  let themeButton = document.querySelector(".form-check-input");
+  themeButton.addEventListener("click", changeTheme);
+  updateDateTime();
+  

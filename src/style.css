@@ -51,7 +51,7 @@ strong {
 #temp {
   display: inline-block;
   vertical-align: middle;
-  color: #ff8ba7;
+  color: #ffc6c7;
   font-size: 125px;
   font-weight: 100;
 }
@@ -74,10 +74,66 @@ a:hover {
   color: #00ffcc;
 }
 
+.dark {
+  background: #61c0bf;
+}
+
+.dark .card {
+  background: #effffc;
+  border: 2px solid #c6fff6;
+  border-radius: 10px;
+}
+
+.dark .cardweekdays {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid #61c0bf;
+  border-radius: 10px;
+  background: #effffc;
+  color: #61c0bf;
+}
+
+.dark h1 {
+  color: #61c0bf;
+}
+
+.dark h2 {
+  color: #61c0bf;
+}
+
+.dark ul {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  margin-top: 75px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #61c0bf;
+}
+
+.dark #temp {
+  color: #61c0bf;
+}
+
+.dark .cardweekdays i {
+  color:#00ffcc;
+  font-size: 35px;
+}
+
+.dark footer {
+  text-align: center;
+  color: #008f72;
+}
+
+.dark a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
 .card {
   margin-top: 35px;
   padding: 10px;
-  border: 1.8px solid #00ffcc;
+  border: 2px solid #ff8ba7;
   border-radius: 10px;
   background: #fffefb;
   box-shadow: 3px 3px 40px rgba(216, 148, 148, 0.4);
@@ -87,15 +143,14 @@ a:hover {
   display: block;
   margin: 0;
   padding: 10px;
-  border: 1.8px solid #00ffcc;
+  border: 2px solid #ff8ba7;
   border-radius: 10px;
   background: #fffefb;
-  box-shadow: 2px 2px 7px rgba(0, 128, 119, 0.2);
   color: #ff8ba7;
 }
 
 .cardweekdays i {
-  color: #ffc6c7;
+  color:#ff8ba7;
   font-size: 35px;
 }
 
@@ -127,7 +182,7 @@ a:hover {
   color: #ff8ba7;
 }
 .btn-primary {
-  background-color: #00ffcc;
+  background-color: #ffc6c7;
   border: none;
   align-items: right;
 }
@@ -139,4 +194,10 @@ a:hover {
 .form-check-input:hover {
   border: 2px solid #ffc6c7;
   background-color: #ff8ba7;
+}
+
+.btn-info:hover {
+  background: linear-gradient(15deg, #61c0bf 0%, #80d0c7 100%);
+  color: white;
+  cursor: pointer;
 }
