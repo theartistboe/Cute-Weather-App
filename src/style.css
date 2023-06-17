@@ -82,6 +82,7 @@ a:hover {
   background: #effffc;
   border: 2px solid #c6fff6;
   border-radius: 10px;
+  box-shadow: 3px 3px 40px rgba(191, 255, 250, 0.774);
 }
 
 .dark .cardweekdays {
@@ -181,23 +182,30 @@ a:hover {
   margin-right: 15px;
   color: #ff8ba7;
 }
+
+.search-bar input[type="text"]::placeholder {
+  color: #61c0bf;
+}
+
 .btn-primary {
   background-color: #ffc6c7;
   border: none;
   align-items: right;
 }
+
 .form-check-input {
   display: block;
   margin: 0 auto;
-  background-color: #ffc6c7;
+  background-color: #80D0C7;
 }
+
 .form-check-input:hover {
-  border: 2px solid #ffc6c7;
-  background-color: #ff8ba7;
+  border: 2px solid #ffC6c7;
+  background-color: #ff8Ba7;
 }
 
 .btn-info:hover {
-  background: linear-gradient(15deg, #61c0bf 0%, #80d0c7 100%);
+  background: linear-gradient(15deg, #61C0BF 0%, #80D0C7 100%);
   color: white;
   cursor: pointer;
 }
