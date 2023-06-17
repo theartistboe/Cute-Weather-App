@@ -134,6 +134,7 @@ a:hover {
 .card {
   margin-top: 35px;
   padding: 10px;
+  text-align: center;
   border: 2px solid #ff8ba7;
   border-radius: 10px;
   background: #fffefb;
@@ -208,4 +209,8 @@ a:hover {
   background: linear-gradient(15deg, #61C0BF 0%, #80D0C7 100%);
   color: white;
   cursor: pointer;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
