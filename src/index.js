@@ -13,6 +13,25 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
 
+  function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+  
+    let forecastHTML = `<div class="row">`;
+    let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri"];
+    days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img src="https://openweathermap.org/img/wn/03d.png" alt="">
+        <br />
+        <span class="weather-forecast-temperature-max">37°F</span> | <span class="weather-forecast-temperature-min">32°C</span>
+      </div>
+    `;
+      })
+    forecastElement.innerHTML = forecastHTML;
+  }
+  
+
 function displayTemperature(response) {
     console.log(response.data);
     let tempElement = document.querySelector("#temp");
@@ -74,6 +93,7 @@ let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
   search("Merced");
+  displayForecast();
 
   function changeTheme() {
     let body = document.querySelector("body");
