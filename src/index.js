@@ -13,7 +13,8 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
 
-  function displayForecast() {
+  function displayForecast(response) {
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
   
     let forecastHTML = `<div class="row">`;
@@ -31,6 +32,13 @@ function formatDate(timestamp) {
     forecastElement.innerHTML = forecastHTML;
   }
   
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displayTemperature(response) {
     console.log(response.data);
@@ -53,6 +61,8 @@ function displayTemperature(response) {
     let iconCode = response.data.weather[0].icon;
     let iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
     iconElement.setAttribute("src", iconUrl);
+
+    getForecast(response.data.coord);
   }
 
 function search(city) {
@@ -93,7 +103,6 @@ let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
   search("Merced");
-  displayForecast();
 
   function changeTheme() {
     let body = document.querySelector("body");
@@ -102,5 +111,4 @@ let celsiusLink = document.querySelector("#celsius-link");
   
   let themeButton = document.querySelector(".form-check-input");
   themeButton.addEventListener("click", changeTheme);
-  updateDateTime();
   
