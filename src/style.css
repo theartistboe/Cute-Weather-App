@@ -79,7 +79,7 @@ a:hover {
 }
 
 .dark .card {
-  background: #effffc;
+  background: #ffffff;
   border: 2px solid #c6fff6;
   border-radius: 10px;
   box-shadow: 3px 3px 40px rgba(191, 255, 250, 0.774);
@@ -91,7 +91,7 @@ a:hover {
   padding: 10px;
   border: 2px solid #00ffcc;
   border-radius: 10px;
-  background: #f9fffe;
+  background: #ffffff;
   color: #61c0bf;
 }
 
@@ -116,11 +116,6 @@ a:hover {
   color: #61c0bf;
 }
 
-.dark .cardweekdays i {
-  color:#00ffcc;
-  font-size: 35px;
-}
-
 .dark footer {
   text-align: center;
   color: #008f72;
@@ -137,7 +132,7 @@ a:hover {
   text-align: center;
   border: 2px solid #ff8Ba7;
   border-radius: 10px;
-  background: #fffefb;
+  background: #ffffff;
   box-shadow: 3px 3px 40px rgb(255, 177, 177);
 }
 
@@ -147,8 +142,9 @@ a:hover {
   padding: 10px;
   border: 2px solid #ff8ba7;
   border-radius: 10px;
-  background: #fffefb;
+  background: #ffffff;
   color: #ff8ba7;
+  z-index: 2; 
 }
 
 .current {
@@ -162,6 +158,8 @@ a:hover {
   width: 100px;
   height: 100px;
   margin: 75px auto;
+  position: relative;
+  z-index: 2;
 }
 
 .search-bar {
@@ -208,4 +206,37 @@ a:hover {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+.weather-temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#overlay-image {
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+#city, #description {
+  position: relative;
+  z-index: 2; 
 }
