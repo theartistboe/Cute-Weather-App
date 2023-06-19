@@ -89,9 +89,9 @@ a:hover {
   display: block;
   margin: 0;
   padding: 10px;
-  border: 2px solid #61c0bf;
+  border: 2px solid #00ffcc;
   border-radius: 10px;
-  background: #effffc;
+  background: #f9fffe;
   color: #61c0bf;
 }
 
@@ -135,10 +135,10 @@ a:hover {
   margin-top: 35px;
   padding: 10px;
   text-align: center;
-  border: 2px solid #ff8ba7;
+  border: 2px solid #ff8Ba7;
   border-radius: 10px;
   background: #fffefb;
-  box-shadow: 3px 3px 40px rgba(216, 148, 148, 0.4);
+  box-shadow: 3px 3px 40px rgb(255, 177, 177);
 }
 
 .cardweekdays {
@@ -149,11 +149,6 @@ a:hover {
   border-radius: 10px;
   background: #fffefb;
   color: #ff8ba7;
-}
-
-.cardweekdays i {
-  color:#ff8ba7;
-  font-size: 35px;
 }
 
 .current {
