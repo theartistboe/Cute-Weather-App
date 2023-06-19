@@ -42,15 +42,13 @@ function formatDate(timestamp) {
   }
   
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "4b3503b2f08a729413c4d33ef1186004";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
-    console.log(response.data);
     let tempElement = document.querySelector("#temp");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
@@ -76,7 +74,7 @@ function displayTemperature(response) {
 
 function search(city) {
     let apiKey = "4b3503b2f08a729413c4d33ef1186004";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayTemperature);
   }
   
@@ -93,23 +91,8 @@ function displayFahrenheitTemperature(event) {
     tempElement.innerHTML = Math.round(fahrenheitTemperature);
   }
 
-  function displayCelsiusTemperature(event) {
-    event.preventDefault();
-    let tempElement = document.querySelector("#temp")
-    tempElement.innerHTML = Math.round(celsiusTemperature);
-  }
-
-let celsiusTemperature = null;
-let fahrenheitTemperature = null;
-
 let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
   search("Merced");
 
