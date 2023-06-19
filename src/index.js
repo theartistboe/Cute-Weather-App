@@ -98,9 +98,21 @@ let form = document.querySelector("#search-form");
 
   function changeTheme() {
     let body = document.querySelector("body");
+    let overlayImage = document.getElementById("overlay-image");
+    let themeButton = document.getElementById("darkThemeToggle");
+
     body.classList.toggle("dark");
+    themeButton.checked = body.classList.contains("dark");
+
+    if (body.classList.contains("dark")) {
+      overlayImage.src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/391/original/Weather_App_Cat.png?1687208115"
+    } else {
+      overlayImage.src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/389/original/Weather_App_Cat_2.png?1687208043"
+    }
   }
   
-  let themeButton = document.querySelector(".form-check-input");
-  themeButton.addEventListener("click", changeTheme);
-  
+    document.addEventListener("DOMContentLoaded", function() {
+    let themeButton = document.getElementById("darkThemeToggle");
+    themeButton.addEventListener("change", changeTheme);
+
+      });

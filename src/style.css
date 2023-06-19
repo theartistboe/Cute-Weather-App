@@ -1,3 +1,7 @@
+body {
+  background: #ffffff;
+}
+
 h1 {
   display: block;
   text-align: center;
@@ -155,8 +159,8 @@ a:hover {
 
 #icon {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   margin: 75px auto;
   position: relative;
   z-index: 2;
@@ -229,7 +233,7 @@ a:hover {
 
 #overlay-image {
   position: absolute;
-  top: 40px;
+  top: 30px;
   left: -15px;
   width: 100%;
   height: auto;
