@@ -92,7 +92,9 @@ a:hover {
   background: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
+  margin: 0;
 
 }
 
